@@ -3,7 +3,7 @@ This file explains in detail how this solution is structured.
 Hooks: 
 
 The 'Hooks' folder contains one class called 'BaseTest.cs'. The purpose of this file is to contain the setup and teardown logic for the other tests, 
-so that the code responsible for creating and later destorying a Chromium browser page does not need repeating. 
+so that the code responsible for creating and later destroying a Chromium browser page does not need repeating. 
 
 Utilities: 
 
@@ -32,7 +32,7 @@ is usually easy to account for.
 
 (Test 2) ValidateLiveOdds:
 - The test beging by navigating to the 'Table Tennis' tab, as per the suggested approach. 
-- The first available pick is located and stored in a variable 'oddselement'. 
+- The first available pick is located and stored in a variable 'oddsElement'. 
 - The inner text (odds) are extracted. 
 - There is an Assertion in the middle of the test which allows up to 60 seconds for the odds to change. 
 - Once (if) the odds change within 60 seconds, the test passes and the initial and updated odds will be visible in the test explorer console. 
