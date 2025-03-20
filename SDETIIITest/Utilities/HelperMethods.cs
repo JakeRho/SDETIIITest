@@ -30,17 +30,6 @@ namespace SDETIIITestProject.Utilities
             return null; // No available picks found
         }
 
-        public static async Task DismissCookieBanner(IPage page)
-        {
-            // Check if the cookie banner exists
-            var cookieBanner = page.Locator("button:has-text('Allow All')");
-
-            if (await cookieBanner.CountAsync() > 0)
-            {
-                await cookieBanner.ClickAsync();
-            }
-        }
-
         public static string TrimExpectedSelectionName(string expectedSelectionName) 
         {
             string result = expectedSelectionName.Contains("\n") ?
@@ -49,8 +38,4 @@ namespace SDETIIITestProject.Utilities
             return result;
         }
     }
-
-
-
-
 }
